@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>My traffic light</title>
+	</head>
+
+	<body>
+		<article class="flex">
+			<section class="wrapper_traffic-light">
+				<div class="semicircle black shadow outline"></div>
+				<div class="light_container black shadow outline">
+					<div id="circleRed" class="circle red"></div>
+					<div id="circleYellow" class="circle yellow"></div>
+					<div id="circleGreen" class="circle green"></div>
+				</div>
+				<div class="post black shadow outline"></div>
+				<div class="base black shadow outline"></div>
+			</section>
+			<section class="controller">
+				<h1 class="title">My traffic light</h1>
+				<div class="buttons">
+					<div class="button-column">
+						<button id="buttonRed" class="button">Red change</button>
+						<button id="buttonYellow" class="button">Yellow change</button>
+						<button id="buttonGreen" class="button">Green change</button>
+					</div>
+					<div class="button-column">
+						<button id="lightsFlashing" class="button">Ligts flashing</button>
+						<button id="lightsFlashingStop" class="button">
+							Stop ligts flashing
+						</button>
+					</div>
+					<div class="button-column">
+						<button id="lightsSequence" class="button">Ligts sequence</button>
+						<button id="lightsSequenceStop" class="button">
+							Stop ligts sequence
+						</button>
+					</div>
+				</div>
+			</section>
+		</article>
+		<script src="index.js"></script>
+	</body>
+</html>
