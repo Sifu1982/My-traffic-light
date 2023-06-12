@@ -43,30 +43,6 @@
 		height: 50px;
 		width: 50px;
 	}
-
-	.red {
-		background-color: lightcoral;
-	}
-
-	.red:hover {
-		background-color: red;
-	}
-
-	.yellow {
-		background-color: lightyellow;
-	}
-
-	.yellow:hover {
-		background-color: yellow;
-	}
-
-	.green {
-		background-color: lightgreen;
-	}
-
-	.green:hover {
-		background-color: green;
-	}
 }
 
 .post {

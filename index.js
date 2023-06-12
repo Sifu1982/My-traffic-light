@@ -1,6 +1,12 @@
 // Constantes
 const initialCircleRadius = '50px';
 const finalCircleRadius = '58px';
+const initialRedColor = 'lightcoral';
+const finalRedColor = 'tomato';
+const initialYellowColor = 'lightYellow';
+const finalYellowColor = 'yellow';
+const initialGreenColor = 'lightGreen';
+const finalGreenColor = 'green';
 
 // Captura de elementos del DOM
 
@@ -17,6 +23,9 @@ const buttonlightsFlashingStop = document.querySelector('#lightsFlashingStop');
 
 // Configuración inicial
 
+circleRed.style.backgroundColor = initialRedColor;
+circleYellow.style.backgroundColor = initialYellowColor;
+circleGreen.style.backgroundColor = initialGreenColor;
 buttonlightsFlashingStop.disabled = true;
 buttonlightsSequenceStop.disabled = true;
 
@@ -45,15 +54,15 @@ function changeColor(element, initialColor, finalColor) {
 }
 
 function changeRedColor() {
-  changeColor(circleRed, 'lightcoral', 'tomato');
+  changeColor(circleRed, initialRedColor, finalRedColor);
 }
 
 function changeYellowColor() {
-  changeColor(circleYellow, 'lightyellow', 'yellow');
+  changeColor(circleYellow, initialYellowColor, finalYellowColor);
 }
 
 function changeGreenColor() {
-  changeColor(circleGreen, 'lightgreen', 'green');
+  changeColor(circleGreen, initialGreenColor, finalGreenColor);
 }
 
 // Funciones de luces parpadeantes
@@ -105,26 +114,26 @@ function colorsSequence() {
   const circleGreenStyle = circleGreen.style;
 
   redLightSequenceTimeout = setTimeout(function () {
-    circleRedStyle.backgroundColor = 'tomato';
+    circleRedStyle.backgroundColor = finalRedColor;
     makeCircleBigger(circleRedStyle);
-    circleYellowStyle.backgroundColor = 'lightyellow';
-    circleGreenStyle.backgroundColor = 'lightgreen';
+    circleYellowStyle.backgroundColor = initialYellowColor;
+    circleGreenStyle.backgroundColor = initialGreenColor;
     makeCircleSmaller(circleGreenStyle);
   }, 0);
 
   yellowLightSequenceTimeout = setTimeout(function () {
-    circleRedStyle.backgroundColor = 'lightcoral';
+    circleRedStyle.backgroundColor = initialRedColor;
     makeCircleSmaller(circleRedStyle);
-    circleYellowStyle.backgroundColor = 'yellow';
+    circleYellowStyle.backgroundColor = finalYellowColor;
     makeCircleBigger(circleYellowStyle);
-    circleGreenStyle.backgroundColor = 'lightgreen';
+    circleGreenStyle.backgroundColor = initialGreenColor;
   }, 1000);
 
   greenLightSequenceTimeout = setTimeout(function () {
-    circleRedStyle.backgroundColor = 'lightcoral';
-    circleYellowStyle.backgroundColor = 'lightyellow';
+    circleRedStyle.backgroundColor = initialRedColor;
+    circleYellowStyle.backgroundColor = initialYellowColor;
     makeCircleSmaller(circleYellowStyle);
-    circleGreenStyle.backgroundColor = 'green';
+    circleGreenStyle.backgroundColor = finalGreenColor;
     makeCircleBigger(circleGreenStyle);
   }, 2000)
 }
